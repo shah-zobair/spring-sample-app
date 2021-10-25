@@ -1,4 +1,4 @@
-<h3>Deploying from Image</h3>
+<h3>Deploying a simple spring app from Image</h3>
 
 **Build the image locally:**
 ```
@@ -27,3 +27,5 @@ oc apply -f deployment-spring-web.yaml
 oc apply -f service-spring-web.yaml
 oc apply -f route-spring-web.yaml
 ```
+
+Now, access the application using the dynamically created URL from route object:  https://<URL>/greeting?name=Shah

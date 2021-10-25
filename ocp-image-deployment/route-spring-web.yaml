@@ -1,0 +1,17 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  annotations:
+  labels:
+    app: spring-web
+  name: spring-web
+spec:
+  port:
+    targetPort: 8080-tcp
+  tls:
+    termination: edge
+  to:
+    kind: Service
+    name: spring-web
+    weight: 100
+  wildcardPolicy: None
